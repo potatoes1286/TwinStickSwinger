@@ -9,7 +9,7 @@ namespace H3VRMod
 	{
 		[HarmonyPatch(typeof(FVRMovementManager), "UpdateMovementWithHand")]
 		[HarmonyPrefix]
-		public static bool Patch_TwinStickSwinger(FVRMovementManager __instance, ref FVRViveHand hand)
+		public static bool Patch_HandMovementUpdate(FVRMovementManager __instance, ref FVRViveHand hand)
 		{
 			if (__instance.Mode == FVRMovementManager.MovementMode.Dash)
 			{
@@ -25,7 +25,7 @@ namespace H3VRMod
 
 		[HarmonyPatch(typeof(FVRMovementManager), "FU")]
 		[HarmonyPrefix]
-		public static bool Patch_TwinStickSwinger2(FVRMovementManager __instance, out bool __state)
+		public static bool Patch_MovementMathUpdate(FVRMovementManager __instance, out bool __state)
 		{
 			if (__instance.Mode == FVRMovementManager.MovementMode.Dash)
 			{
@@ -47,7 +47,7 @@ namespace H3VRMod
 		
 		[HarmonyPatch(typeof(FVRMovementManager), "FU")]
 		[HarmonyPostfix]
-		public static void Patch_TwinStickSwinger2andAHalf(FVRMovementManager __instance, bool __state)
+		public static void Patch_MovementMathUpdateEnd(FVRMovementManager __instance, bool __state)
 		{
 			if (__state)
 			{
