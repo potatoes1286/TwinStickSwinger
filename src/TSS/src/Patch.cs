@@ -55,13 +55,27 @@ namespace H3VRMod
 			}
 		}
 		
-		/*[HarmonyPatch(typeof(FVRPointableButton), "Awake")]
-		[HarmonyPrefix]
-		public static bool Patch_FixDashName(FVRPointableButton __instance)
+		//[HarmonyPatch(typeof(FVRPointableButton), "Awake")]
+		[HarmonyPatch(typeof(FVRPointable), "Update")]
+		[HarmonyPostfix]
+		public static void Patch_FixDashName(FVRPointable __instance)
 		{
 			//WristMenu/MenuGo/Canvas/Button_LocoSet_0 (1)/Text
-			if (__instance.Text.text == "Dash") __instance.Text.text = "Twinstick Swinger";
-			return true;
-		}*/
+			if (__instance.MaxPointingRange == 1)
+			{
+				__instance.MaxPointingRange = 1.001f;
+				if (__instance is FVRWristMenuPointableButton)
+				{
+					var text = __instance.GetComponentInChildren<Text>();
+					if (text != null)
+					{
+						if (text.text == "Dash")
+						{
+							text.text = "TSS";
+						}
+					}
+				}
+			}
+		}
 	}
 }

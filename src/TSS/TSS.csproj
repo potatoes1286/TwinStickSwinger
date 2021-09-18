@@ -6,6 +6,7 @@
         <Nullable>enable</Nullable>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <RootNamespace>Plugin</RootNamespace>
+        <AssemblyName>TwinStickSwinger</AssemblyName>
     </PropertyGroup>
     
     <ItemGroup>       
