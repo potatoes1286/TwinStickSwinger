@@ -1,4 +1,5 @@
 ﻿using BepInEx;
+using HarmonyLib;
 
 namespace H3VRMod
 {
@@ -6,27 +7,9 @@ namespace H3VRMod
 	[BepInProcess("h3vr.exe")]
 	public class Plugin : BaseUnityPlugin
 	{
-		private readonly Hooks _hooks;
-
-		public Plugin()
+		public void Start()
 		{
-			_hooks = new Hooks();
-			_hooks.Hook();
-		}
-
-		private void Awake()
-		{
-
-		}
-
-		private void Update()
-		{
-
-		}
-
-		private void OnDestroy()
-		{
-			_hooks.Unhook();
+			Harmony.CreateAndPatchAll(typeof(Patch));
 		}
 	}
 }

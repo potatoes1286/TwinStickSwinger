@@ -14,11 +14,11 @@
     </ItemGroup>
     
     <ItemGroup>
-      <Reference Include="Assembly-CSharp">
-        <HintPath>..\libs\Assembly-CSharp_publicized.dll</HintPath>
+      <Reference Include="Assembly-CSharp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>E:\SteamLibrary\steamapps\common\H3VR\h3vr_Data\Managed\publicized_assemblies\Assembly-CSharp_publicized.dll</HintPath>
       </Reference>
-      <Reference Include="MMHOOK_Assembly-CSharp">
-        <HintPath>..\libs\MMHOOK_Assembly-CSharp.dll</HintPath>
+      <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>E:\SteamLibrary\steamapps\common\H3VR\h3vr_Data\Managed\UnityEngine.UI.dll</HintPath>
       </Reference>
     </ItemGroup>
 
