@@ -13,18 +13,11 @@ namespace H3VRMod
 		{
 			if (__instance.Mode == FVRMovementManager.MovementMode.Dash)
 			{
-				if (hand.Input.AXButtonDown)
-				{
-					if (hand.IsThisTheRightHand)
-					{
-						__instance.TurnClockWise();
-					}
-					else
-					{
-						__instance.TurnCounterClockWise();
-					}
-				}
+				__instance.AXButtonCheck(hand);
+				var tssts = GM.Options.MovementOptions.TwinStickSnapturnState;
+				GM.Options.MovementOptions.TwinStickSnapturnState = MovementOptions.TwinStickSnapturnMode.Disabled;
 				__instance.HandUpdateTwinstick(hand);
+				GM.Options.MovementOptions.TwinStickSnapturnState = tssts;
 				return false;
 			}
 			return true;
@@ -36,10 +29,12 @@ namespace H3VRMod
 		{
 			if (__instance.Mode == FVRMovementManager.MovementMode.Dash)
 			{
+				//set gravmode to 0 so that twinstick doesn't also simulate gravity again
 				var gravmode = GM.Options.SimulationOptions.PlayerGravityMode;
 				GM.Options.SimulationOptions.PlayerGravityMode = SimulationOptions.GravityMode.None;
 				__instance.UpdateModeTwoAxis(true);
 				GM.Options.SimulationOptions.PlayerGravityMode = gravmode;
+				//once it's done, set mode for armswinger and let the original method do its calcs
 				__instance.Mode = FVRMovementManager.MovementMode.Armswinger;
 				__state = true;
 			}
