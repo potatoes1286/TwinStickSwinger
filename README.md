@@ -1,7 +1,5 @@
-# H3VR.EmptyBepInEx
-Template BepInEx plugin for H3VR. 
+I'm just about at my FUCKING LIMIT.
 
-Includes
-- Autobuilding Thunderstore package
-- Stripped publicized H3VR assembly
-- MMHook H3VR assembly
+FUck armswinger.
+fUCK twin stick.
+TWIN STICK SWINGER!!!!
