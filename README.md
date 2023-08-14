@@ -1,7 +1,9 @@
 # Twin Stick Swinger
 
-## Exclusively designed for, and to work with Index. ~~Lesser~~ Other controllers, especially those with ~~inferior~~ fewer buttons in their control scheme, may not be able to use Twin Stick Swinger.
+## NOTE: THIS IS ONLY TESTED TO WORK ON INDEX.
 
-Twin Stick Swinger combines Twin Stick and Armswinger into one. It allows the speed of Armswinger and the precision of Twin Stick because their control schemes do not really interfere with eachother on the Index controllers.
+On the Valve Index, the control scheme for Twin Stick and Armswinger actually don't interfere with each other. This allows both to be enabled at once without any compromises, and thus, Twinstick Swinger was born!
+
+Twin Stick Swinger combines Twin Stick and Armswinger into one, providing the best of both worlds. Require the precision while handling a gun? Use the Twinstick controls. Want to run about? Press Armswinger controls! Why settle for one when you can get both?
 
 You can download the mod [here from Thunderstore.](https://h3vr.thunderstore.io/package/Potatoes/Potatoes_Twin_Stick_Swinger/)
