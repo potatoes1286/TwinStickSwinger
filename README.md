@@ -1,6 +1,16 @@
 # Twin Stick Swinger
 
-## NOTE: THIS IS ONLY TESTED TO WORK ON INDEX.
+## NOTE: THIS IS ONLY TESTED TO WORK ON INDEX. REPLACES DASH.
+
+Please notify me if TwinStickSwinger works on other controller types, or if it doesn't!
+
+Working:
+
+- Valve Index
+
+Not Working:
+
+Unknown.
 
 On the Valve Index, the control scheme for Twin Stick and Armswinger actually don't interfere with each other. This allows both to be enabled at once without any compromises, and thus, Twinstick Swinger was born!
 
