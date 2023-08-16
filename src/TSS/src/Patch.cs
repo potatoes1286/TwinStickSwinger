@@ -144,7 +144,6 @@ namespace H3VRMod
 			}
 			num *= 0.65f;
 			if (IsTwinStickSwinger) {
-				Debug.Log("Scaling");
 				num *= 0.7f;
 			}
 			if (__instance.Mode == FVRMovementManager.MovementMode.Armswinger
